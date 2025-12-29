@@ -62,7 +62,8 @@ app.post('/predict', upload.single('image'), async (req, res) => {
     const imagePath = req.file.path;
     const pythonScript = path.join(__dirname, '..', 'model', 'predict.py');
     
-    const pythonPath = process.env.PYTHON_PATH || 'python';
+    const pythonPath = path.join(__dirname, 'venv', 'Scripts', 'python.exe');
+
     
     const pythonProcess = spawn(pythonPath, [pythonScript, imagePath]);
 
