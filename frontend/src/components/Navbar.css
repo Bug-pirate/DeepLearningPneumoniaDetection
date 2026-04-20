@@ -67,8 +67,13 @@
 
 .logo-icon {
   font-size: 2rem;
+  color: var(--primary-500);
   filter: drop-shadow(0 4px 8px rgba(59, 130, 246, 0.3));
   animation: float 3s ease-in-out infinite;
+}
+
+.dark-mode .logo-icon {
+  color: var(--primary-300);
 }
 
 @keyframes float {
@@ -105,6 +110,11 @@
   white-space: nowrap;
   position: relative;
   overflow: hidden;
+}
+
+.nav-link svg {
+  color: currentColor;
+  font-size: 0.95rem;
 }
 
 .nav-link::before {
@@ -162,6 +172,7 @@
   padding: 0;
   position: relative;
   overflow: hidden;
+  color: var(--primary-600);
 }
 
 .theme-toggle::before {
@@ -189,6 +200,7 @@
 .dark-mode .theme-toggle {
   background: linear-gradient(135deg, var(--gray-700) 0%, var(--gray-800) 100%);
   border-color: var(--gray-600);
+  color: var(--primary-300);
 }
 
 .dark-mode .theme-toggle:hover {

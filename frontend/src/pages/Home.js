@@ -1,5 +1,18 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import {
+  FaArrowRight,
+  FaBolt,
+  FaBook,
+  FaBrain,
+  FaBullseye,
+  FaCheckCircle,
+  FaCloudUploadAlt,
+  FaExclamationTriangle,
+  FaMicroscope,
+  FaRocket,
+  FaStar,
+} from 'react-icons/fa';
 import './Home.css';
 
 function Home() {
@@ -16,7 +29,7 @@ function Home() {
         {/* Hero Section */}
         <section className="hero-section">
           <div className="hero-badge">
-            <span className="badge-icon">✨</span>
+            <span className="badge-icon"><FaStar aria-hidden="true" /></span>
             <span>AI-Powered Medical Imaging</span>
           </div>
           
@@ -32,9 +45,9 @@ function Home() {
           
           <div className="hero-cta">
             <Link to="/detection" className="cta-button primary">
-              <span className="btn-icon">🔬</span>
+              <span className="btn-icon"><FaMicroscope aria-hidden="true" /></span>
               Start Detection
-              <span className="arrow">→</span>
+              <span className="arrow"><FaArrowRight aria-hidden="true" /></span>
             </Link>
             <a href="#how-it-works" className="cta-button secondary">
               Learn More
@@ -55,7 +68,7 @@ function Home() {
           <div className="features-grid">
             <div className="feature-card" data-step="1">
               <div className="feature-icon-wrapper">
-                <span className="feature-icon">📤</span>
+                <span className="feature-icon"><FaCloudUploadAlt aria-hidden="true" /></span>
                 <span className="step-number">01</span>
               </div>
               <h3>Upload X-Ray</h3>
@@ -64,7 +77,7 @@ function Home() {
             
             <div className="feature-card" data-step="2">
               <div className="feature-icon-wrapper">
-                <span className="feature-icon">🧠</span>
+                <span className="feature-icon"><FaBrain aria-hidden="true" /></span>
                 <span className="step-number">02</span>
               </div>
               <h3>AI Analysis</h3>
@@ -73,7 +86,7 @@ function Home() {
             
             <div className="feature-card" data-step="3">
               <div className="feature-icon-wrapper">
-                <span className="feature-icon">✅</span>
+                <span className="feature-icon"><FaCheckCircle aria-hidden="true" /></span>
                 <span className="step-number">03</span>
               </div>
               <h3>Get Results</h3>
@@ -94,7 +107,7 @@ function Home() {
           
           <div className="tech-grid">
             <div className="tech-card">
-              <div className="tech-icon">🎯</div>
+              <div className="tech-icon"><FaBullseye aria-hidden="true" /></div>
               <h3>High Accuracy</h3>
               <p>
                 Our ensemble deep learning model combines ResNet50 and DenseNet121 
@@ -108,7 +121,7 @@ function Home() {
             </div>
             
             <div className="tech-card">
-              <div className="tech-icon">⚡</div>
+              <div className="tech-icon"><FaBolt aria-hidden="true" /></div>
               <h3>Fast Processing</h3>
               <p>
                 Get results in seconds. Our optimized pipeline processes images 
@@ -121,7 +134,7 @@ function Home() {
             </div>
             
             <div className="tech-card">
-              <div className="tech-icon">🔬</div>
+              <div className="tech-icon"><FaMicroscope aria-hidden="true" /></div>
               <h3>Research-Based</h3>
               <p>
                 Trained on a curated medical imaging dataset with thousands 
@@ -134,7 +147,7 @@ function Home() {
             </div>
             
             <div className="tech-card">
-              <div className="tech-icon">📚</div>
+              <div className="tech-icon"><FaBook aria-hidden="true" /></div>
               <h3>Educational Purpose</h3>
               <p>
                 This tool is designed for educational and research purposes to demonstrate 
@@ -154,16 +167,16 @@ function Home() {
             <h2>Ready to Try?</h2>
             <p>Upload your chest X-ray and get instant AI-powered analysis</p>
             <Link to="/detection" className="cta-button primary large">
-              <span className="btn-icon">🚀</span>
+              <span className="btn-icon"><FaRocket aria-hidden="true" /></span>
               Start Detection Now
-              <span className="arrow">→</span>
+              <span className="arrow"><FaArrowRight aria-hidden="true" /></span>
             </Link>
           </div>
         </section>
 
         {/* Disclaimer */}
         <div className="disclaimer">
-          <div className="disclaimer-icon">⚠️</div>
+          <div className="disclaimer-icon"><FaExclamationTriangle aria-hidden="true" /></div>
           <p>
             <strong>Medical Disclaimer:</strong> This application is for educational and research purposes only. 
             It is not intended to replace professional medical diagnosis. Always consult 

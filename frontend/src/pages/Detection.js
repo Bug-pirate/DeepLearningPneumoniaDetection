@@ -1,5 +1,16 @@
 import React, { useState, useCallback } from 'react';
 import axios from 'axios';
+import {
+  FaArrowRight,
+  FaCheckCircle,
+  FaCloudUploadAlt,
+  FaExclamationCircle,
+  FaExclamationTriangle,
+  FaInfoCircle,
+  FaMicroscope,
+  FaSyncAlt,
+  FaTimes,
+} from 'react-icons/fa';
 import Loader from '../components/Loader';
 import './Detection.css';
 
@@ -109,7 +120,7 @@ function Detection() {
       <div className="detection-container">
         {/* Header */}
         <div className="detection-header">
-          <span className="page-badge">🔬 AI Analysis</span>
+          <span className="page-badge"><FaMicroscope aria-hidden="true" /> AI Analysis</span>
           <h1 className="page-title">Pneumonia Detection</h1>
           <p className="page-subtitle">
             Upload a chest X-ray image for instant AI-powered analysis
@@ -136,7 +147,7 @@ function Detection() {
               <label htmlFor="file-input" className="upload-label">
                 <div className="upload-icon-wrapper">
                   <div className="upload-icon-bg"></div>
-                  <span className="upload-icon">📤</span>
+                  <span className="upload-icon"><FaCloudUploadAlt aria-hidden="true" /></span>
                 </div>
                 <div className="upload-content">
                   <p className="upload-text">
@@ -160,7 +171,7 @@ function Detection() {
                   </div>
                 </div>
                 <button onClick={handleReset} className="reset-button">
-                  <span className="reset-icon">✕</span>
+                  <span className="reset-icon"><FaTimes aria-hidden="true" /></span>
                   Remove Image
                 </button>
               </div>
@@ -169,9 +180,9 @@ function Detection() {
 
           {selectedFile && !loading && !result && (
             <button onClick={handleUpload} className="analyze-button">
-              <span className="btn-icon">🔬</span>
+              <span className="btn-icon"><FaMicroscope aria-hidden="true" /></span>
               Analyze X-Ray
-              <span className="btn-arrow">→</span>
+              <span className="btn-arrow"><FaArrowRight aria-hidden="true" /></span>
             </button>
           )}
         </div>
@@ -183,7 +194,7 @@ function Detection() {
         {error && (
           <div className="error-container">
             <div className="error-icon-wrapper">
-              <span className="error-icon">⚠️</span>
+              <span className="error-icon"><FaExclamationTriangle aria-hidden="true" /></span>
             </div>
             <div className="error-content">
               <h3 className="error-title">Analysis Failed</h3>
@@ -203,7 +214,7 @@ function Detection() {
               <div className="result-header">
                 <div className={`result-icon-wrapper ${isPneumonia ? 'danger' : 'success'}`}>
                   <span className="result-icon">
-                    {isPneumonia ? '🚨' : '✅'}
+                    {isPneumonia ? <FaExclamationCircle aria-hidden="true" /> : <FaCheckCircle aria-hidden="true" />}
                   </span>
                 </div>
                 <div className="result-badge">
@@ -241,14 +252,14 @@ function Detection() {
 
               {/* Action Button */}
               <button onClick={handleReset} className="new-analysis-button">
-                <span className="btn-icon">🔄</span>
+                <span className="btn-icon"><FaSyncAlt aria-hidden="true" /></span>
                 Analyze Another Image
               </button>
             </div>
 
             {/* Disclaimer */}
             <div className="result-disclaimer">
-              <span className="disclaimer-icon">ℹ️</span>
+              <span className="disclaimer-icon"><FaInfoCircle aria-hidden="true" /></span>
               <p>
                 <strong>Important:</strong> This is an AI-generated result for educational purposes only. 
                 Please consult a qualified healthcare professional for accurate medical diagnosis and treatment.

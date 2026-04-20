@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import { FaHome, FaLungs, FaMicroscope, FaMoon, FaSun } from 'react-icons/fa';
 import { useTheme } from '../context/ThemeContext';
 import './Navbar.css';
 
@@ -29,7 +30,7 @@ function Navbar() {
     <nav className={`navbar ${isScrolled ? 'scrolled' : ''}`}>
       <div className="navbar-container">
         <Link to="/" className="navbar-logo">
-          <span className="logo-icon">🫁</span>
+          <span className="logo-icon"><FaLungs aria-hidden="true" /></span>
           <span className="logo-text">PneumoAI</span>
         </Link>
         
@@ -48,7 +49,7 @@ function Navbar() {
                 to="/" 
                 className={location.pathname === '/' ? 'nav-link active' : 'nav-link'}
               >
-                🏠 Home
+                <FaHome aria-hidden="true" /> Home
               </Link>
             </li>
             <li className="nav-item">
@@ -56,7 +57,7 @@ function Navbar() {
                 to="/detection" 
                 className={location.pathname === '/detection' ? 'nav-link active' : 'nav-link'}
               >
-                🔬 Detection
+                <FaMicroscope aria-hidden="true" /> Detection
               </Link>
             </li>
           </ul>
@@ -65,7 +66,7 @@ function Navbar() {
             onClick={toggleTheme}
             aria-label="Toggle theme"
           >
-            {isDarkMode ? '☀️' : '🌙'}
+            {isDarkMode ? <FaSun aria-hidden="true" /> : <FaMoon aria-hidden="true" />}
           </button>
         </div>
       </div>

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { FaHeart, FaLungs } from 'react-icons/fa';
 import './Footer.css';
 
 const Footer = () => {
@@ -12,7 +13,7 @@ const Footer = () => {
           {/* Brand Section */}
           <div className="footer-brand">
             <Link to="/" className="footer-logo">
-              <span className="footer-logo-icon">🫁</span>
+              <span className="footer-logo-icon"><FaLungs aria-hidden="true" /></span>
               <span className="footer-logo-text">PneumoAI</span>
             </Link>
             <p className="footer-tagline">
@@ -56,7 +57,7 @@ const Footer = () => {
             </p>
             <div className="footer-bottom-links">
               <span className="footer-made-with">
-                Made with <span className="heart">❤️</span> using React & PyTorch
+                Made with <span className="heart"><FaHeart aria-hidden="true" /></span> using React & PyTorch
               </span>
             </div>
           </div>

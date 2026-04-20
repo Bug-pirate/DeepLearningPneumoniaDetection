@@ -66,6 +66,11 @@
   margin-bottom: 1rem;
 }
 
+.page-badge svg {
+  color: currentColor;
+  margin-right: 0.35rem;
+}
+
 .dark-mode .page-badge {
   background: linear-gradient(135deg, rgba(59, 130, 246, 0.2) 0%, rgba(59, 130, 246, 0.1) 100%);
   color: var(--primary-400);
@@ -189,10 +194,15 @@
 
 .upload-icon {
   font-size: 3.5rem;
+  color: var(--primary-500);
   position: relative;
   z-index: 1;
   filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.1));
   animation: bounce-subtle 2s ease-in-out infinite;
+}
+
+.dark-mode .upload-icon {
+  color: var(--primary-300);
 }
 
 @keyframes bounce-subtle {
@@ -328,6 +338,7 @@
 
 .reset-icon {
   font-size: 1rem;
+  color: currentColor;
 }
 
 /* Analyze Button */
@@ -378,9 +389,11 @@
 
 .btn-icon {
   font-size: 1.25rem;
+  color: currentColor;
 }
 
 .btn-arrow {
+  color: currentColor;
   transition: transform var(--transition-base);
 }
 
@@ -427,6 +440,7 @@
 
 .error-icon {
   font-size: 2rem;
+  color: var(--danger-500);
 }
 
 .error-content {
@@ -562,6 +576,14 @@
 
 .result-icon {
   font-size: 2.5rem;
+}
+
+.result-icon-wrapper.danger .result-icon {
+  color: var(--danger-500);
+}
+
+.result-icon-wrapper.success .result-icon {
+  color: var(--success-500);
 }
 
 .result-badge {
@@ -745,6 +767,11 @@
 .disclaimer-icon {
   font-size: 1.25rem;
   flex-shrink: 0;
+  color: var(--primary-600);
+}
+
+.dark-mode .disclaimer-icon {
+  color: var(--primary-400);
 }
 
 .result-disclaimer p {

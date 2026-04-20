@@ -52,6 +52,11 @@
 
 .footer-logo-icon {
   font-size: 1.75rem;
+  color: var(--primary-500);
+}
+
+.dark-mode .footer-logo-icon {
+  color: var(--primary-300);
 }
 
 .footer-logo-text {
@@ -203,7 +208,12 @@
 
 .heart {
   display: inline-block;
+  color: var(--danger-500);
   animation: heartbeat 1.5s ease-in-out infinite;
+}
+
+.dark-mode .heart {
+  color: #fb7185;
 }
 
 @keyframes heartbeat {

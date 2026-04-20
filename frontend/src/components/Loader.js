@@ -1,4 +1,5 @@
 import React from 'react';
+import { FaLungs } from 'react-icons/fa';
 import './Loader.css';
 
 function Loader() {
@@ -7,7 +8,7 @@ function Loader() {
       <div className="loader-wrapper">
         <div className="medical-scan-animation">
           <div className="scan-area">
-            <div className="lung-icon">🫁</div>
+            <div className="lung-icon"><FaLungs aria-hidden="true" /></div>
             <div className="scan-line"></div>
           </div>
         </div>

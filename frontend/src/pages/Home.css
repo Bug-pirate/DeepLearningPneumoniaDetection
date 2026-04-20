@@ -118,6 +118,7 @@
 
 .badge-icon {
   font-size: 1rem;
+  color: currentColor;
 }
 
 .hero-title {
@@ -254,11 +255,13 @@
 
 .btn-icon {
   font-size: 1.25rem;
+  color: currentColor;
 }
 
 .arrow {
   transition: transform var(--transition-base);
   font-size: 1.1rem;
+  color: currentColor;
 }
 
 .cta-button:hover .arrow {
@@ -393,7 +396,12 @@
 .feature-icon {
   font-size: 3rem;
   display: block;
+  color: var(--primary-500);
   filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.1));
+}
+
+.dark-mode .feature-icon {
+  color: var(--primary-300);
 }
 
 .step-number {
@@ -491,6 +499,11 @@
   font-size: 2.5rem;
   margin-bottom: 1rem;
   display: block;
+  color: var(--primary-500);
+}
+
+.dark-mode .tech-icon {
+  color: var(--primary-300);
 }
 
 .tech-card h3 {
@@ -628,6 +641,11 @@
 .disclaimer-icon {
   font-size: 1.5rem;
   flex-shrink: 0;
+  color: var(--warning-600);
+}
+
+.dark-mode .disclaimer-icon {
+  color: var(--warning-500);
 }
 
 .disclaimer p {
